@@ -1,4 +1,6 @@
-class LibroDigitale extends Libro {
+import { Libro } from "./Libro";
+
+export class LibroDigitale extends Libro {
     constructor (titolo: string, autore: string, kb: number);
     constructor (titolo: string, autore: string, kb: number, prezzo: number);
     constructor (titolo: string, autore: string, public kb: number, prezzo?: number) 
@@ -8,6 +10,6 @@ class LibroDigitale extends Libro {
     }
 
     override getInfo() {
-        return super.getInfo() + this.kb;
+        return `${super.getInfo()} + ${this.kb}kb`;
     }
 }

@@ -1,4 +1,4 @@
-class Libro {
+export class Libro {
     titolo : string;
     autore : string;
     prezzo? : number;
@@ -18,10 +18,4 @@ class Libro {
             return `${this.titolo} + ${this.autore} + ${this.dataCreazione} + `;
         return `${this.titolo} + ${this.autore} + ${this.prezzo} + ${this.dataCreazione} + `;
     }
-}
-
-
-
-class Libro2 {
-    constructor (public titolo2: string, public autore2: string, public prezzo2? : number) {}
 }

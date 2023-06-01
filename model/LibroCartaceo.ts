@@ -1,4 +1,6 @@
-class LibroCartaceo extends Libro {
+import { Libro } from "./Libro";
+
+export class LibroCartaceo extends Libro {
     constructor (titolo: string, autore: string, pagine: number);
     constructor (titolo: string, autore: string, pagine: number, prezzo: number);
     constructor (titolo: string, autore: string, public pagine: number, prezzo?: number) 
@@ -8,6 +10,6 @@ class LibroCartaceo extends Libro {
     }
 
     override getInfo() {
-        return super.getInfo() + this.pagine;
+        return `${super.getInfo()} + ${this.pagine}p`;
     }
 }
