@@ -1,4 +1,6 @@
-export class Libro {
+import { IGetInfo } from "./IGetInfo";
+
+export abstract class Libro implements IGetInfo {
     titolo : string;
     autore : string;
     prezzo? : number;
